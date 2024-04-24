@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // Map the entry file to main.jsx
       '/src/main.tsx': '/src/main.jsx'
     }
   }

@@ -25,13 +25,13 @@ const ArcGISMap = ({mapId}) => {
       // Create a new map view
       const view = new MapView({
         map: webmap,
-        container: "viewDiv" // Div element
+        container: "viewDiv" 
       });
 
       // Add scale bar widget
       const scaleBar = new ScaleBar({
         view: view,
-        unit: "dual" // Use both metric and non-metric units
+        unit: "dual" // both metric and non-metric units
       });
       view.ui.add(scaleBar, "bottom-right");
 
@@ -42,13 +42,12 @@ const ArcGISMap = ({mapId}) => {
       view.ui.add(legend, "bottom-left");
 
       const popupTemplate = {
-        title: "{Name}", // Title based on feature attribute
+        title: "{Name}", 
         content: [{
           type: "fields",
           fieldInfos: [
             { fieldName: "f1", label: "Attribute 1" },
             { fieldName: "f2", label: "Attribute 2" },
-            // Add more fields as needed
           ]
         }]
       };
